@@ -1,26 +1,27 @@
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.Objects;
 
 public class Todo {
-    private long id;
-    private String name;
-    private String description;
-    private Date dateOfCreation;
-    private Date targetDate;
+    long id;
+    String name;
+    String description;
+    LocalDate dateOfCreation;
+    LocalDate targetDate;
 
-    public Date getTargetDate() {
+    public LocalDate getTargetDate() {
         return targetDate;
     }
 
-    public void setTargetDate(Date targetDate) {
+    public void setTargetDate(LocalDate targetDate) {
         this.targetDate = targetDate;
     }
 
-    public Date getDateOfCreation() {
+    public LocalDate getDateOfCreation() {
         return dateOfCreation;
     }
 
-    public void setDateOfCreation(Date dateOfCreation) {
+    public void setDateOfCreation(LocalDate dateOfCreation) {
         this.dateOfCreation = dateOfCreation;
     }
 
@@ -54,11 +55,6 @@ public class Todo {
         if (o == null || getClass() != o.getClass()) return false;
         Todo todo = (Todo) o;
         return id == todo.id && Objects.equals(name, todo.name) && Objects.equals(description, todo.description) && Objects.equals(dateOfCreation, todo.dateOfCreation) && Objects.equals(targetDate, todo.targetDate);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, description, dateOfCreation, targetDate);
     }
 
     @Override
