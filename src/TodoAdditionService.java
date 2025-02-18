@@ -1,5 +1,7 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 import java.util.random.RandomGenerator;
 
@@ -19,7 +21,7 @@ public class TodoAdditionService {
         todo.setId((int) (Math.random() * 10));
 
         System.out.printf("Successfully Made Todo Called Titled : %s%n", todo.getName());
-        serializer.WriteValueAsJson(todo);
+        System.out.println(serializer.writeValueAsJson(todo));;
         return todo;
     }
 }
