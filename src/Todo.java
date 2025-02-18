@@ -9,6 +9,14 @@ public class Todo {
     LocalDate dateOfCreation;
     LocalDate targetDate;
 
+    public Todo() {}
+
+    public Todo(String name, String description, LocalDate targetDate) {
+        this.name = name;
+        this.description = description;
+        this.targetDate = targetDate;
+    }
+
     public LocalDate getTargetDate() {
         return targetDate;
     }
